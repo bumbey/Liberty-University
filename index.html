@@ -1,5 +1,5 @@
 <!--
-HTML Web Page 1
+HTML Web Page
 
 Cayden Park | CSCN315-001
 Professor Kristi Smith
@@ -8,18 +8,50 @@ Professor Kristi Smith
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale1.0">
-    <title>Cayden Park's Incredible HTML Web Page</title>
-    <style>body{text-align: center;}</style>
+    <title>Intro to Cayden Park</title>
+    <style>body{text-align:left; color:white; font-family:monospace; font-size: x-large;}</style>
 </head>
 
-<body>
-    <h1>Welcome</h1>
+<body style="background-color:black";>
+    <!--TITLE-->
+    <h1 style="color:yellow">CEJP101: Intro to Cayden Park</h1>
+
+    <!--ABOUT ME-->
+    <h2>ABOUT ME</h2>
+    <img src="animal.jpg" alt="Me with some creature" width="289" height="386" >
+    <p>Hello, my name is <strong>Cayden Park</strong>!</p>
+    <p> - I am from <strong>Colorado Springs, Colorado</strong>.<br>
+        - I am a junior double majoring in <strong>Computer Engineering</strong> and <strong>Computer Science: Software Engineering</strong> with a minor in <strong>Mathematics</strong>.<br>
+        - I currently work as a Unity game developer for <strong>RedSpace Ops</strong> in Colorado Springs!<br>
+        - The ideas I have for the website I want to build this semester are either a to-do list or a DCP tool to help with checking prerequisites.
+    </p>
+
     <form>
-        <label>Pick a color:</label>
-        <input type="color">
-        <input type="submit">
+        <label for="hobbies">My hobbies include:</label>
+        <strong><ul id="hobbies" name="hobbies">
+            <li>Piano</li>
+            <li>Game Development</li>
+            <li>3D Modeling</li>
+        </ul></strong>
     </form>
+
+    <!--INTERACTIVE-->
+    <h2>INTERACTIVE</h2>
+    <form>
+        <label>Tell me your name!<br>(<em>don't worry, I'll immediately forget)</em></label><br><br>
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lname"><br>
+        <input type="submit">
+    </form><br>
+
+    <form>
+        <label>Select your favorite day ever:</label><br>
+        <input type="date" id="fday" name="fday">
+    </form><br>
+
+    <a href="https://www.youtube.com/watch?v=qcFQB8XPrko" target="_blank"><strong>Click here for orangutan asmr</strong></a>
 </body>
 </html>
