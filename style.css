@@ -1,0 +1,158 @@
+/* Color references */
+:root {
+    --txt-color:white;
+    --bg-color:#18171D;
+    --hd-color:#090909;
+    --bt-color:#423D4D;
+    --bt-hover-color:#E71D36;
+    --tt-color:#ffda21;
+}
+
+/* Body */
+body {
+    background-color: var(--bg-color);
+    color:var(--txt-color);
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* --TITLE HEADER-- */
+/* Top container class for header */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hd-color);
+    height: 64px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Aligns buttons on header */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+}
+
+/* For rotating skewed button */
+.rotate-button {
+    position: relative;
+    transform: rotate(-70deg);
+}
+
+/* Skewed button */
+.header-button {
+    background-color: var(--bt-color);
+    color: var(--txt-color);
+    height: 48px;
+    width: 60px;
+    outline: 4px solid var(--hd-color);
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+    transform: skew(20deg);
+    transition: background-color 0.1s, color 0.1s, height 0.3s, width 0.3s;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Change button color and size when hovering */
+.header-button:hover {
+    height: 56px;
+    background-color: var(--bt-hover-color);;
+    color: var(--hd-color);
+}
+
+/* Unskews button text */
+.header-button span {
+    display: inline-block;
+    transform: skew(-20deg);
+}
+
+/* Centers title on header */
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    color: var(--tt-color);
+}
+
+/* --SECTIONS-- */
+/* Bold background + centered section header */
+.section-header {
+    background-color: var(--hd-color);
+    padding: 10px 30x;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Two-column about container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* About-section text */
+.about-text {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+/* About-section image */
+#about-image {
+    flex: 1;
+    outline: 6px solid var(--hd-color);
+    border-radius: 3px;
+    height: auto;
+}
+
+/* Generic centered column */
+.column-container {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-buttons {
+        position: static;
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .rotate-button {
+        transform: rotate(0deg);
+        flex: 1;
+        margin: 0;
+    }
+
+    .header-button {
+        width: 100%;
+        transform: skew(0deg);
+    }
+
+    .header-button:hover {
+        height: 48px;
+    }
+
+    .header-button span {
+        transform: skew(0deg);
+    }
+}

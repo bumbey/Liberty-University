@@ -8,50 +8,67 @@ Professor Kristi Smith
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale1.0">
-    <title>Intro to Cayden Park</title>
-    <style>body{text-align:left; color:white; font-family:monospace; font-size: x-large;}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEJP101</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color:black";>
-    <!--TITLE-->
-    <h1 style="color:yellow">CEJP101: Intro to Cayden Park</h1>
+<body>
+    <!--Header-->
+    <div class="header-container">
+        <!--Header Buttons-->
+        <div class="header-buttons">
+            <form class="rotate-button">
+                <button class="header-button" type="button" onclick="window.location.href='index.html'"><span>HOME</span></button>
+            </form>
+            <form class="rotate-button">
+                <button class="header-button" type="button" onclick="window.location.href='spam.html'"><span>SPAM</span></button>
+            </form>
+        </div>
+        <!--Header Title-->
+        <h1 class="header-title">CEJP101: Intro to Cayden Park</h1>
+    </div>
 
-    <!--ABOUT ME-->
-    <h2>ABOUT ME</h2>
-    <img src="animal.jpg" alt="Me with some creature" width="289" height="386" >
-    <p>Hello, my name is <strong>Cayden Park</strong>!</p>
-    <p> - I am from <strong>Colorado Springs, Colorado</strong>.<br>
-        - I am a junior double majoring in <strong>Computer Engineering</strong> and <strong>Computer Science: Software Engineering</strong> with a minor in <strong>Mathematics</strong>.<br>
-        - I currently work as a Unity game developer for <strong>RedSpace Ops</strong> in Colorado Springs!<br>
-        - The ideas I have for the website I want to build this semester are either a to-do list or a DCP tool to help with checking prerequisites.
-    </p>
+    <!--About Me-->
+    <div class="about-container">
+        <div class="about-text">
+            <h2 class="section-header">ABOUT ME</h2>
+            <p>Hello, my name is <strong>Cayden Park</strong>!</p>
+            <p> - I am from <strong>Colorado Springs, Colorado</strong>.<br>
+                - I am a junior double majoring in <strong>Computer Engineering</strong> and <strong>Computer Science: Software Engineering</strong> with a minor in <strong>Mathematics</strong>.<br>
+                - I currently work as a Unity game developer for <strong>RedSpace Ops</strong> in Colorado Springs!<br>
+                - The ideas I have for the website I want to build this semester are either a to-do list or a DCP tool to help with checking prerequisites.
+            </p>
+            <form>
+                <label for="hobbies">My hobbies include:</label>
+                <strong><ul id="hobbies" name="hobbies">
+                    <li>Piano</li>
+                    <li>Game Development</li>
+                    <li>3D Modeling</li>
+                </ul></strong>
+            </form>
+        </div>
+        <img id="about-image" src="animal.jpg" alt="Me with some creature" width="289" height="386">
+    </div>
 
-    <form>
-        <label for="hobbies">My hobbies include:</label>
-        <strong><ul id="hobbies" name="hobbies">
-            <li>Piano</li>
-            <li>Game Development</li>
-            <li>3D Modeling</li>
-        </ul></strong>
-    </form>
+    <!--Interactive-->
+    <div class="column-container">
+        <h2 class="section-header">INTERACTIVE</h2>
+        <form>
+            <label>Tell me your name!<br>(<em>don't worry, I'll immediately forget)</em></label><br><br>
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name: </label>
+            <input type="text" id="lname" name="lname"><br>
+            <input type="submit">
+        </form><br>
 
-    <!--INTERACTIVE-->
-    <h2>INTERACTIVE</h2>
-    <form>
-        <label>Tell me your name!<br>(<em>don't worry, I'll immediately forget)</em></label><br><br>
-        <label for="fname">First name: </label>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last name: </label>
-        <input type="text" id="lname" name="lname"><br>
-        <input type="submit">
-    </form><br>
+        <form>
+            <label>Select your favorite day ever:</label><br>
+            <input type="date" id="fday" name="fday">
+        </form><br>
 
-    <form>
-        <label>Select your favorite day ever:</label><br>
-        <input type="date" id="fday" name="fday">
-    </form><br>
-
-    <a href="https://www.youtube.com/watch?v=qcFQB8XPrko" target="_blank"><strong>Click here for orangutan asmr</strong></a>
+        <a href="https://www.youtube.com/watch?v=qcFQB8XPrko" target="_blank"><strong>Click here for orangutan asmr</strong></a>
+    </div>
 </body>
 </html>

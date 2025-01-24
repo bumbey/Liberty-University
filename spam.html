@@ -1,0 +1,77 @@
+<!--
+SPAM Web Page
+
+Cayden Park | CSCN315-001
+Professor Kristi Smith
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>body{
+        /* Display SPAM background */
+        background-image: url("spam.jpg");
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.7);
+        background-blend-mode: overlay;    
+        }
+
+        /* Rainbow effect keyframes */
+        @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+        }
+        
+        /* Rainbow text class */
+        .rainbow-text {
+            animation: rainbow 1s infinite;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div class="header-container">
+        <!--Header Buttons-->
+        <div class="header-buttons">
+            <form class="rotate-button">
+                <button class="header-button" type="button" onclick="window.location.href='index.html'"><span>HOME</span></button>
+            </form>
+            <form class="rotate-button">
+                <button class="header-button" type="button" onclick="window.location.href='spam.html'"><span>SPAM</span></button>
+            </form>
+        </div>
+        <!--Header Title-->
+        <h1 class="header-title">SPAM</h1>
+    </div>
+    <br>
+
+    <!--Spam Discussion-->
+    <form class="column-container" style="background-color: var(--hd-color); padding: 20px; border-radius: 30px;">
+        <span>You see, I really like <span class="rainbow-text">spam</span>.</span>
+        <p>
+            At home, I eat spam almost every day.<br>
+            I like spam with eggs, spam with rice, spam with spam.<br>
+        </p>
+        <p>
+            What I don't like is spam in my email.<br>
+            I get so much spam in my email.<br>
+            I have <em>2,601</em> unread emails.<br>
+        </p>
+        <p>
+            Maybe if they were about spam,<br>
+            I would read them.<br>
+        </p>
+    </form>
+</body>
+</html>
