@@ -2,30 +2,28 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prereq | Home</title>
+    <title>Prereq | Settings</title>
     <link rel="stylesheet" href="styles.css">
 
-    <!--Script and loadTheme() called in head to avoid screen flash from theme not being loaded-->
     <script src="theme.js"></script>
     <script>loadTheme();</script>
 </head>
 <body>
     <div class="container">
-        <h1>HOME</h1>
+        <h1>SETTINGS</h1>
         <p>
-            The Home page will contain a quick summary of information on your planner, degree completion percentage, and current classes.
+            The Settings page will allow you to adjust your preferences, such as color themes.
         </p>
-        <button type="button" onclick="toggleTheme()">TOGGLE THEME</button>
     </div>
 
     <nav>
-        <div id="index.html" class="ribbon selected">
+        <div id="index.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>HOME</span></div>
         <div id="planner.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>PLANNER</span></div>
         <div id="credits.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>CREDITS</span></div>
-        <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
+        <div id="settings.html" class="ribbon selected">
             <span>SETTINGS</span></div>
     </nav>
     <script src="scripts.js"></script>

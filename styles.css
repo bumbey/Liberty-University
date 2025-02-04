@@ -1,0 +1,162 @@
+/* Variable references */
+:root {
+    --line-width: 4px;
+
+    --ribbon-width: 18px;
+    --ribbon-height: 90px;
+    --ribbon-hover-padding: 18px;
+    --ribbon-gap: 7px;
+}
+
+/* Color Themes */
+.light-theme {
+    --primary-color:#ff5714;
+    --primary-highlight-color:#ff7024;
+    --text-color:#2C2D31;
+    --text-hover-color:white;
+    --text-highlight-color:#fafada;
+    --background-color:#ffe7b9;
+    --dark-color:#f1c681;
+    --darkest-color:#f4ae5e;
+    --nav-button-color:var(--dark-color);
+    --nav-button-hover-color:var(--darkest-color);
+    --nav-button-selected-color:var(--primary-color);
+}
+
+.dark-theme {
+    --primary-color:#16ce6f;
+    --primary-highlight-color:#45e680;
+    --text-color:#ececec;
+    --text-hover-color:white;
+    --text-highlight-color:#fafada;
+    --background-color:#2C2D31;
+    --dark-color:#0d0f11;
+    --darkest-color:black;
+    --nav-button-color:var(--dark-color);
+    --nav-button-hover-color:#48485c;
+    --nav-button-selected-color:var(--primary-color);
+}
+
+/* --BODY-- */
+body {
+    background-color: var(--background-color);
+    color:var(--text-color);
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    max-width: 1264px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 24px;
+    top: 0;
+}
+
+.container {
+    flex-grow: 1;
+    display: flexbox;
+    max-width: 900px;
+    width: 100%;
+}
+
+button {
+    background-color: var(--primary-color);
+    border: 0px solid;
+    padding: 16px;
+    border-radius: 64px;
+    color: var(--text-highlight-color);
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, padding 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-highlight-color);
+    color: var(--text-hover-color);
+    padding: 16px 24px;
+}
+
+h1 {
+    padding: 4px 0px;
+    border-bottom: var(--line-width) dotted var(--dark-color);
+}
+
+/* --NAVIGATION BAR-- */
+nav {
+    padding: 0px 36px;
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: var(--ribbon-gap);
+}
+
+/* Ribbon Button */
+.ribbon {
+    --ribbon-color: var(--nav-button-color);
+
+    position: relative;
+    width: fit-content;
+    height: var(--ribbon-height);
+    padding: 10px var(--ribbon-width);
+    margin: 0 0;
+    cursor: pointer;
+    user-select: none;
+    background: var(--ribbon-color);
+    font-size: 13px;
+    border-color: var(--ribbon-color);
+    transition: background-color 0.1s, padding 0.2s, color 0.05s;
+}
+
+.ribbon.selected {
+    --ribbon-color: var(--nav-button-selected-color);
+
+    padding: var(--ribbon-hover-padding) var(--ribbon-width);
+    color: var(--text-highlight-color);
+    cursor: default;
+}
+
+/* Ribbon Ends */
+.ribbon::before,
+.ribbon::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: var(--ribbon-width) solid var(--ribbon-color);
+    transition: border 0.1s;
+}
+
+.ribbon::before {
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.ribbon::after {
+    top: 100%;
+    right: 0;
+    transform: translateY(-50%) translateX(0.3125px); /* Shift by 5/16 px to fill border gap */
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+/* Ribbon Hover */
+.ribbon:hover {
+    --ribbon-color: var(--nav-button-hover-color);
+    padding: var(--ribbon-hover-padding) var(--ribbon-width);
+    color: var(--text-hover-color);
+}
+
+.ribbon.selected:hover {
+    --ribbon-color: var(--nav-button-selected-color);
+    color: var(--text-hover-color);
+}
+
+/* Ribbon Text */
+.ribbon span {
+    font-weight: bold;
+    position: absolute;
+    transform-origin: left center;
+    transform: rotate(90deg);
+    bottom: var(--ribbon-height);
+    white-space: nowrap;
+}
