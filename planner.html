@@ -9,24 +9,23 @@
     <script>loadTheme();</script>
 </head>
 <body>
-    <div class="container">
-        <h1>PLANNER</h1>
-        <p>
-            The Planner page will feature a drag-and-drop interface to plan your degree completion plan as well as view prerequisites.
-        </p>
-    </div>
-
     <nav>
         <div id="index.html" class="ribbon"  type="button" onclick="loadPage(id)">
             <span>HOME</span></div>
-        <div id="planner.html" class="ribbon selected">
+        <div class="ribbon selected">
             <span>PLANNER</span></div>
         <div id="credits.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>CREDITS</span></div>
         <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>SETTINGS</span></div>
     </nav>
-    <script src="scripts.js"></script>
+
+    <h1>PLANNER</h1>
+    <p>
+        The Planner page will feature a drag-and-drop interface to plan your degree completion plan as well as view prerequisites.
+    </p>
+
+    <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 </body>
 </html>

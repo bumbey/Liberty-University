@@ -10,16 +10,8 @@
     <script>loadTheme();</script>
 </head>
 <body>
-    <div class="container">
-        <h1>HOME</h1>
-        <p>
-            The Home page will contain a quick summary of information on your planner, degree completion percentage, and current classes.
-        </p>
-        <button type="button" onclick="toggleTheme()">TOGGLE THEME</button>
-    </div>
-
     <nav>
-        <div id="index.html" class="ribbon selected">
+        <div class="ribbon selected">
             <span>HOME</span></div>
         <div id="planner.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>PLANNER</span></div>
@@ -28,7 +20,36 @@
         <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>SETTINGS</span></div>
     </nav>
-    <script src="scripts.js"></script>
+
+    <h1>HOME</h1>
+    <form onsubmit="displayGreeting()">
+        <span>Hello! Tell me about yourself!</span>
+        <br><br>
+        <label for="nameInput">My name is...</label><br>
+        <input id="nameInput" type="text" placeholder="Enter your name" required>
+        <br>
+
+        <label for="ageInput">My age is...</label><br>
+        <input id="ageInput" type="number" placeholder="Enter your age" min="0" required>
+        <br>
+
+        <button type="submit">Submit</button>
+        <br>
+
+        <span class="response" id="greeting"></span>
+        <br><br>
+    </form>
+
+    <!--Courses List-->
+    <label for="totalCredits">Total Credits:</label>
+    <span id="totalCredits" style="font-weight: bold">0</span>
+    <button class="course-add" onclick="addCourse()">+</button>
+
+    <div id="courseList"></div>
+
+    <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
+
+    <script src="proj2.js"></script>
 </body>
 </html>

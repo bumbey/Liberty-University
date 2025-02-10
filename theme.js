@@ -4,15 +4,16 @@ function setTheme(theme) {
     localStorage.setItem("theme", theme);
 }
 
-// Toggles theme between light and dark
-function toggleTheme() {
-    const currentTheme = document.documentElement.className;
-    const theme = currentTheme === "light-theme" ? "dark-theme" : "light-theme";
-    setTheme(theme);
-}
-
 // Load theme from localStorage on page load
 function loadTheme() {
-    const savedTheme = localStorage.getItem("theme") || "light-theme";
+    const savedTheme = localStorage.getItem("theme") || "theme-light";
     document.documentElement.className = savedTheme;
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeSelect = document.getElementById("themeSelect");
+    themeSelect.value = localStorage.getItem("theme") || "theme-light";
+    themeSelect.addEventListener("change", function() {
+        setTheme(this.value);
+    });
+});

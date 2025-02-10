@@ -9,24 +9,23 @@
     <script>loadTheme();</script>
 </head>
 <body>
-    <div class="container">
-        <h1>CREDITS</h1>
-        <p>
-            The Credits page is where you will keep track of all of your credits necessary to graduate, as well as your percentage of completion.
-        </p>
-    </div>
-
     <nav>
         <div id="index.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>HOME</span></div>
         <div id="planner.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>PLANNER</span></div>
-        <div id="credits.html" class="ribbon selected">
+        <div class="ribbon selected">
             <span>CREDITS</span></div>
         <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>SETTINGS</span></div>
     </nav>
-    <script src="scripts.js"></script>
+
+    <h1>CREDITS</h1>
+    <p>
+        The Credits page is where you will keep track of all of your credits necessary to graduate, as well as your percentage of completion.
+    </p>
+
+    <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 </body>
 </html>
