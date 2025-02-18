@@ -18,7 +18,7 @@
     --text-highlight-color:#fdfdcb;
     --background-color:#ffe7b9;
     --dark-color:#f1c681;
-    --darkest-color:#c08358;
+    --darkest-color:#ba6d3e;
     --nav-text-color:var(--text-color);
     --nav-text-hover-color:var(--text-hover-color);
     --nav-text-highlight-color:var(--text-highlight-color);
@@ -142,7 +142,7 @@ input {
     color: var(--text-color);
     border: none;
     border-radius: 8px;  /* Rounded corners (optional) */
-    transition: background-color 0.1s;
+    transition: background-color 0.1s, box-shadow 0.1s;
 }
 
 input:hover {
@@ -260,7 +260,9 @@ nav {
 }
 
 .course {
-    background-color: var(--darkest-color);
+    --course-color: var(--darkest-color);
+    
+    background-color: var(--course-color);
     padding: 6px;
     border-radius: 12px;
     display: inline-flex;
@@ -272,6 +274,10 @@ nav {
     width: 96px;
 }
 
+.course-invalid {
+    box-shadow: inset 0px 0px 0px 2px red;
+}
+
 .course-name {
     flex: 1;
     margin: 0px 8px;
@@ -280,6 +286,24 @@ nav {
 
 .course-credits {
     width: 72px;
+}
+
+.course-color {
+    --course-color: var(--dark-color);
+
+    margin: 0px;
+    margin-left: 8px;
+    background-color: var(--course-color);
+    box-shadow: inset 0px 0px 0px 2px var(--nav-button-color);
+    padding: 6px;
+    border-radius: 6px;
+    transition: box-shadow 0.1s
+}
+
+.course-color:hover {
+    box-shadow: inset 0px 0px 0px 2px var(--nav-button-hover-color);
+    padding: 6px;
+    background-color: var(--course-color);
 }
 
 .course-remove {

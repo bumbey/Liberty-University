@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Slight delay to ensure removal experiences transition
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-            navButton.classList.remove("selected");
+            if (navButton) {
+                navButton.classList.remove("selected");
+            }
         });
     });
 });

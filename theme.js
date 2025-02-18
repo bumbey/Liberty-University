@@ -21,8 +21,10 @@ function loadTheme() {
 document.addEventListener("DOMContentLoaded", () => {
     // Load theme selector if it exists
     const themeSelect = document.getElementById("themeSelect");
-    themeSelect.value = localStorage.getItem("theme") || "theme-light";
-    themeSelect.addEventListener("change", function() {
-        setTheme(this.value);
-    });
+    if (themeSelect) {
+        themeSelect.value = localStorage.getItem("theme") || "theme-light";
+        themeSelect.addEventListener("change", function() {
+            setTheme(this.value);
+        });
+    }
 });
