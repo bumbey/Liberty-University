@@ -259,6 +259,7 @@ nav {
     opacity: 1;
 }
 
+/* --COURSES-- */
 .course {
     --course-color: var(--darkest-color);
     
@@ -332,6 +333,97 @@ nav {
 .course-add:hover {
     padding: 8px 0px;
     background-color: var(--nav-button-hover-color);
+}
+
+/* --IMAGES-- */
+.horizontal-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.gallery {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.gallery-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-color);
+    margin: 2px;
+    padding: 4px;
+    position: relative;
+    height: 144px;
+    border-radius: 12px;
+    transition: transform 0.2s, background-color 0.1s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) translateY(-8px);
+    cursor: pointer;
+    background-color: var(--nav-button-hover-color);
+}
+
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.gallery-button {
+    height: 100%;
+    margin: 0px;
+}
+
+button.gallery-button.left {
+    position: absolute;
+    left: 0;
+}
+
+button.gallery-button.right {
+    position: absolute;
+    right: 0;
+}
+
+button.overlay-button {
+    height: 128px;
+    margin: 0px;
+}
+
+button.overlay-button.left {
+    position: absolute;
+    left: 48px;
+}
+
+button.overlay-button.right {
+    position: absolute;
+    right: 48px;
+}
+
+button.overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 48px;
 }
 
 @media (max-width: 400px) {

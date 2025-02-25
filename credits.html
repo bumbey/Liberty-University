@@ -7,6 +7,8 @@
 
     <script src="theme.js"></script>
     <script>loadTheme();</script>
+
+    <script src="proj3.js" defer></script>
 </head>
 <body>
     <nav>
@@ -25,9 +27,40 @@
         The Credits page is where you will keep track of all of your credits necessary to graduate, as well as your percentage of completion.
     </p>
 
+    <div class="horizontal-container">
+        <img class="gallery-item" src="images/animal.jpg" style="height:256px">
+    </div>
+
+    <!--Greeting Stuff-->
+    <form onsubmit="displayGreeting()">
+        <span>Hello! Tell me about yourself!</span>
+        <br><br>
+        <label for="nameInput">My name is...</label><br>
+        <input id="nameInput" type="text" placeholder="Enter your name" required>
+        <br>
+
+        <label for="ageInput">My age is...</label><br>
+        <input id="ageInput" type="number" placeholder="Enter your age" min="0" required>
+        <br>
+
+        <button type="submit">Submit</button>
+        <br>
+
+        <span class="response" id="greeting"></span>
+        <br><br>
+    </form>
+
+    <!--Courses List-->
+    <label>Duplicate course abbreviations are not allowed! (Case insensitive)</label>
+    <br>
+    <br>
+    <label for="totalCredits">Total Credits:</label>
+    <span id="totalCredits" style="font-weight: bold">0</span>
+    <button class="course-add" onclick="addCourse()">+</button>
+
+    <div id="courseList"></div>
+
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
-
-    <script src="proj2.js"></script>
 </body>
 </html>
