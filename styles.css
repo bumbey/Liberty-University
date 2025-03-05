@@ -31,7 +31,7 @@
     --primary-color:black;
     --primary-highlight-color:var(--primary-color);
     --text-color:black;
-    --text-faded-color:white;
+    --text-faded-color:black;
     --text-hover-color:white;
     --text-highlight-color:white;
     --background-color:white;
@@ -138,6 +138,7 @@ select:hover {
 input {
     background-color: var(--dark-color);
     font: inherit;
+    margin: 4px;
     padding: 6px;
     color: var(--text-color);
     border: none;
@@ -272,20 +273,23 @@ nav {
 }
 
 .course-abbreviation {
+    margin: 0px;
     width: 96px;
 }
 
-.course-invalid {
+input.invalid {
     box-shadow: inset 0px 0px 0px 2px red;
 }
 
 .course-name {
+    margin: 0px;
     flex: 1;
     margin: 0px 8px;
     min-width: 0;
 }
 
 .course-credits {
+    margin: 0px;
     width: 72px;
 }
 
@@ -424,6 +428,12 @@ button.overlay-close {
     position: absolute;
     top: 16px;
     right: 48px;
+}
+
+label.help {
+    font-size:14px;
+    margin:6px;
+    color: var(--text-faded-color);
 }
 
 @media (max-width: 400px) {

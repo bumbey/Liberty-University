@@ -136,11 +136,11 @@ function checkCourseAbbreviation() {
 
         // Condition checks if value of input is a duplicate
         if (dupes.includes(val)) {
-            abbrInputs[i].classList.add("course-invalid");
+            abbrInputs[i].classList.add("invalid");
             console.log(`Abbreviation "${val}" is already being used! Change it to a unique abbreviation!`);
         }
         else {
-            abbrInputs[i].classList.remove("course-invalid");
+            abbrInputs[i].classList.remove("invalid");
         }
     }
 }

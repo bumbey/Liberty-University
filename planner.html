@@ -25,11 +25,18 @@
         The Planner page will feature a drag-and-drop interface to plan your degree completion plan as well as view prerequisites.
     </p>
 
+    <br><br><br>
+    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Photo Gallery</h2>
     <div class="horizontal-container">
-        <img class="gallery-item" src="images/snowman.jpg" style="height:256px">
+        <button class="gallery-button left" onclick="moveGallery(-1)"><</button>
+        <div class="gallery"></div>
+        <button class="gallery-button right" onclick="moveGallery(1)">></button>
     </div>
+    <h3 id="image-caption" style="text-align:center"></h3>
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
+
+    <script src="proj5.js"></script>
 </body>
 </html>

@@ -23,17 +23,38 @@
 
     <h1>HOME</h1>
     <br><br><br>
-    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Photo Gallery</h2>
-    <div class="horizontal-container">
-        <button class="gallery-button left" onclick="moveGallery(-1)"><</button>
-        <div class="gallery"></div>
-        <button class="gallery-button right" onclick="moveGallery(1)">></button>
-    </div>
-    <h3 id="image-caption" style="text-align:center"></h3>
+    <form id="signUpForm" name="signUpForm">
+        <h3 style="background-color:var(--dark-color); text-align:center; padding:6px; border-radius:6px;">Sign up</h3>
+        <label id="accountCreatedLabel" style="font-weight:bold"></label><br><br>
+        <input id="firstNameInput" name="firstNameInput" type="text" placeholder="First name" required>
+        <input id="lastNameInput" name="lastNameInput" type="text" placeholder="Last name" required><br>
+        <label id="nameLabel" class="help">
+            Must contain only letters.</label><br><br>
+        <input id="usernameInput" name="usernameInput" type="text" placeholder="Username" required><br>
+        <label id="usernameLabel" class="help">
+            Must be between 6 and 15 characters long, containing only alphanumeric characters (letters and numbers), and it cannot start with a number.</label><br>
+        <input id="emailInput" name="emailInput" type="email", placeholder="Email" required><br>
+        <label id="emailLabel" class="help">
+            Must be a valid email format.</label><br><br>
+        <input id="passwordInput" name="passwordInput" type="password" placeholder="Password" required><br>
+        <label id="passwordLabel" class="help">
+            Must be between 8 and 20 characters, containing at least one uppercase letter, one lowercase letter, one digit, and one special character.</label><br>
+        <input id="confirmPasswordInput" name="confirmPasswordInput" type="password" placeholder="Confirm password" required><br>
+        <label id="confirmPasswordLabel" class="help">
+            Must match the password exactly.</label><br><br>
+        <input id="phoneInput" name="phoneInput" type="tel" placeholder="Phone number" required><br>
+        <label id="phoneLabel" class="help">
+            Must be a valid phone number format.</label><br>
+        <input id="dobInput" name="dobInput" type="date" placeholder="Date of birth" required><br>
+        <label id="dobLabel" class="help">
+            The user must be at least 18 years old.</label><br><br>
+        <input id="agreeInput" name="agreeInput" type="checkbox" required><label for="agreeInput" class="help"> Agree to terms and conditions</label><br><br>
+        <button id="submit" type="submit" onclick="validateSignUpForm()">Sign up</button>
+    </form>
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 
-    <script src="proj5.js"></script>
+    <script src="proj6.js"></script>
 </body>
 </html>
