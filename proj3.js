@@ -1,17 +1,3 @@
-// Displays greeting from name and age input
-function displayGreeting() {
-    // Stops page from refreshing
-    event.preventDefault();
-
-    const name = document.getElementById("nameInput").value;
-    const age = document.getElementById("ageInput").value;
-
-    const greeting = document.getElementById("greeting");
-    greeting.textContent = `${name} is a wonderful name! And ${age} is a lovely age to be! That's like, ${age * 365 * 24 * 60 * 60} seconds!`;
-    greeting.classList.add("visible");
-    console.log(`${name} is a wonderful name! And ${age} is a lovely age to be! That's like, ${age * 365 * 24 * 60 * 60} seconds!`);
-}
-
 // Creates a new course element
 function addCourse() {
     console.log("Adding new course.");
