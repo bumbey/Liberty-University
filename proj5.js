@@ -14,7 +14,6 @@ Uses createElement and appendChild for gallery and overlay.
 Photo is included on every page.
 */
 
-
 // Image file references
 const imgFiles = [
     "animal.jpg",

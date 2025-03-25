@@ -23,29 +23,16 @@
 
     <h1>HOME</h1>
 
-    <h2>Option Selection</h2>
-    <form onsubmit="submitSelection(event)">
-        <input value="Option 1" type="checkbox">Option 1<br>
-        <input value="Option 2" type="checkbox">Option 2<br>
-        <input value="Option 3" type="checkbox">Option 3<br>
-        <button type="submit">Submit</button><br>
-        <label style="font-weight: bold">Selected options:</label><br>
-        <label id="selectionOutput"></label>
-    </form>
+    <!--Task List-->
+    <h3>Task Manager</h3>
+    <button class="course-add" onclick="addTask()">+</button>
 
-    <h2>Regex</h2>
-    <label><strong>Valid phone formats:</strong><br>xxxxxxxxxx<br>xxx-xxx-xxxx<br>(xxx) xxx-xxxx<br></label><br>
-    <input id="phoneInput" type="text" placeholder="Enter phone number"><br>
-    <label id="validPhone"></label><br>
-
-    <h2>File Reader</h2>
-    <label>Upload text file to display:</label><br>
-    <input id="fileInput" type="file"><br>
-    <pre id="fileOutput"></pre>
+    <div id="taskList"></div>
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 
-    <script src="proj7.js"></script>
+    <script src="objects.js"></script>
+    <script src="proj8.js"></script>
 </body>
 </html>

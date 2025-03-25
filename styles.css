@@ -261,7 +261,7 @@ nav {
 }
 
 /* --COURSES-- */
-.course {
+.course, .task {
     --course-color: var(--darkest-color);
     
     background-color: var(--course-color);
@@ -282,7 +282,6 @@ input.invalid {
 }
 
 .course-name {
-    margin: 0px;
     flex: 1;
     margin: 0px 8px;
     min-width: 0;
@@ -311,7 +310,7 @@ input.invalid {
     background-color: var(--course-color);
 }
 
-.course-remove {
+.course-remove, .task-remove {
     margin: 0px;
     margin-left: 8px;
     background-color: var(--dark-color);
@@ -319,7 +318,7 @@ input.invalid {
     border-radius: 6px;
 }
 
-.course-remove:hover {
+.course-remove:hover, .task-remove:hover {
     padding: 6px 10px;
     background-color: var(--nav-button-hover-color);
 }
@@ -337,6 +336,29 @@ input.invalid {
 .course-add:hover {
     padding: 8px 0px;
     background-color: var(--nav-button-hover-color);
+}
+
+/* --TASKS-- */
+.task-name {
+    margin: 0px;
+    width: 100%;
+}
+
+.task-due {
+    margin: 0px 8px 0px 0px;
+}
+
+.task-label {
+    margin: 0px 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--text-hover-color-color)
+}
+
+.task-complete {
+    box-shadow: inset 0px 0px 0px 4px lime;
 }
 
 /* --IMAGES-- */
