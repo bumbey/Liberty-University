@@ -458,6 +458,37 @@ label.help {
     color: var(--text-faded-color);
 }
 
+/* -- TEXT COLORS -- */
+.text-red {
+    --text-color: red;
+}
+
+.text-blue {
+    --text-color: blue;
+}
+
+.text-green {
+    --text-color: green;
+}
+
+/* -- FONT SIZES -- */
+.pt10 {
+    font-size:10pt;
+}
+
+.pt12 {
+    font-size:12pt;
+}
+
+.pt14 {
+    font-size:14pt;
+}
+
+.pt16 {
+    font-size:16pt;
+}
+
+/* -- SMALL DISPLAY --*/
 @media (max-width: 400px) {
     nav {
         float: none;
