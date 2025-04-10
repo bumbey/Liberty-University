@@ -21,18 +21,23 @@
             <span>SETTINGS</span></div>
     </nav>
 
-    <h1>HOME</h1>
+    <h1>HOME</h1><br><br><br><br>
 
-    <!--Task List-->
-    <h3>Task Manager</h3>
-    <button class="course-add" onclick="addTask()">+</button>
-
-    <div id="taskList"></div>
+    <div class="horizontal">
+        <div class="centered">
+            <br>
+            <div class="puzzle-grid"></div>
+            <h2 id="timer">0:00</h2>
+            <button id="reset">Reset</button><br>
+            <label id="message">Finish the Puzzle!</label>
+        </div>
+            <div class="puzzle-storage"></div>
+    </div>
+    
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 
-    <script src="objects.js"></script>
-    <script src="proj8.js"></script>
+    <script src="proj10.js"></script>
 </body>
 </html>
