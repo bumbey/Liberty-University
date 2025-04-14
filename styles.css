@@ -566,6 +566,19 @@ div.horizontal {
     font-size:16pt;
 }
 
+/* -- WEATHER DISPLAY -- */
+.weather-display {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 24px;
+    border-radius: 240px;
+}
+
 /* -- SMALL DISPLAY --*/
 @media (max-width: 400px) {
     nav {

@@ -23,9 +23,30 @@
 
     <h1>HOME</h1><br><br><br><br>
 
+    <!-- Weather Display -->
+    <div class="weather-display">
+        <h2>Weather</h2>
+        <span id="weatherError" style="color:red;font-weight:bold"></span>
+        <span id="temp" style="font-size:48px;font-weight:bold;">0°F</span>
+        <span id="feelsLike">Feels like: <b>0°F</b></span>
+        <div class="horizontal">
+            <span id="minTemp">Min: 0°F</span>
+            <span id="maxTemp">Max: 0°F</span>
+        </div><br>
+
+        <span id="location" style="font-size:24px;font-weight:bold">Placeholder, US</span>
+        <div class="horizontal">
+            <span id="lat">0.00° N</span>
+            <span id="lon">0.00° W</span>
+        </div><br>
+
+        <span id="weatherDesc" style="font-size:20px;font-weight:bold">Clear</span>
+        <span id="windSpeed">Wind Speed: 0 mph</span>
+    </div><br>
+
+    <!-- Puzzle Display -->
     <div class="horizontal">
-        <div class="centered">
-            <br>
+        <div class="centered"><br>
             <div class="puzzle-grid"></div>
             <h2 id="timer">0:00</h2>
             <button id="reset">Reset</button><br>
@@ -33,11 +54,11 @@
         </div>
             <div class="puzzle-storage"></div>
     </div>
-    
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 
     <script src="proj10.js"></script>
+    <script src="proj11.js"></script>
 </body>
 </html>
