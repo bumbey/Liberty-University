@@ -579,6 +579,166 @@ div.horizontal {
     border-radius: 240px;
 }
 
+/* -- PLANNER -- */
+.planner {
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.planner-semester {
+    position: relative;
+    border: 6px solid var(--dark-color);
+    border-radius: 8px;
+    min-width: 196px;
+    min-height: 640px;
+    margin: -3px;
+    flex-shrink: 0;
+}
+
+.planner-header {
+    background: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0px 27px;
+    width: 144px;
+    color: var(--text-faded-color);
+    font-size: 12px;
+}
+
+input.planner-header::placeholder {
+    color: var(--dark-color);
+}
+
+.planner-add-semester {
+    background-color: var(--dark-color);
+    border-radius: 8px;
+    width: 10px;
+    height: 640px;
+    margin: 0px 5px;
+    padding: 0px;
+    text-align: center;
+    color: var(--background-color);
+    transition: width 0.2s;
+    flex-shrink: 0;
+}
+
+.planner-add-semester:hover {
+    background-color: var(--dark-color);
+    width: 14px;
+    padding: 0px;
+}
+
+.planner-course {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8px;
+    width: 196px;
+    height: 64px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+}
+
+.planner-remove {
+    background: none;
+    color: var(--dark-color);
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+.planner-remove:hover {
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.planner-course-code {
+    background: none;
+    width: 144px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 8px;
+    padding: 0px 4px;
+    outline: none;
+    transition: padding 0.2s;
+}
+
+.planner-course-code:hover {
+    background: none;
+    padding: 0px 8px;
+}
+
+input.planner-course-code::placeholder {
+    padding: 0px;
+}
+
+.planner-course-title {
+    background: none;
+    width: 144px;
+    margin: 0px 8px;
+    padding: 0px 4px;
+    font-style: italic;
+    font-size: 10px;
+    outline: none;
+    transition: padding 0.2s;
+}
+
+.planner-course-title:hover {
+    background: none;
+    padding: 0px 8px;
+}
+
+input.planner-course-title::placeholder {
+    padding: 0px;
+}
+
+.planner-course-credits {
+    background: none;
+    position: absolute;
+    right: -16px;
+    outline: none;
+    width: 32px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.planner-course-credits:hover {
+    background: none;
+}
+
+input.planner-course-credits::placeholder {
+    padding: 0px;
+}
+
+.planner-add-course {
+    background-color: var(--dark-color);
+    height: 16px;
+    width: 196px;
+    margin: 0px 8px;
+    border-radius: 8px;
+    padding: 0px;
+    color: var(--background-color);
+    transition: height 0.1s;
+}
+
+.planner-add-course:hover {
+    background-color: var(--dark-color);
+    height: 20px;
+    padding: 0px;
+}
+
 /* -- SMALL DISPLAY --*/
 @media (max-width: 400px) {
     nav {

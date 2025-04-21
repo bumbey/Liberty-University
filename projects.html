@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prereq | Planner</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="proj9.js"></script>
+    <script>loadTheme();</script>
+</head>
+<body>
+    <nav>
+        <div id="index.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>HOME</span></div>
+        <div id="planner.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>PLANNER</span></div>
+        <div id="credits.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>CREDITS</span></div>
+        <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>SETTINGS</span></div>
+        <div class="ribbon selected">
+            <span>PROJECTS</span></div>
+    </nav>
+
+    <h1>PROJECTS</h1>
+    <p>
+        The Projects page contains a few of the projects developed over the course of CSCN315: Front-End Programming with JavaScript.
+    </p>
+
+    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Photo Gallery</h2>
+    <div class="horizontal-container">
+        <button class="gallery-button left" onclick="moveGallery(-1)"><</button>
+        <div class="gallery"></div>
+        <button class="gallery-button right" onclick="moveGallery(1)">></button>
+    </div>
+    <h3 id="image-caption" style="text-align:center"></h3>
+    
+    <!--Task List--><br><br><br><br>
+    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Task Manager</h2>
+    <button class="course-add" onclick="addTask()">+</button>
+
+    <div id="taskList"></div><br>
+
+    <!-- Weather Display --><br><br><br><br>
+    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Weather</h2>
+    <div class="weather-display">
+        <h2>Weather</h2>
+        <span id="weatherError" style="color:red;font-weight:bold"></span>
+        <span id="temp" style="font-size:48px;font-weight:bold;">0°F</span>
+        <span id="feelsLike">Feels like: <b>0°F</b></span>
+        <div class="horizontal">
+            <span id="minTemp">Min: 0°F</span>
+            <span id="maxTemp">Max: 0°F</span>
+        </div><br>
+
+        <span id="location" style="font-size:24px;font-weight:bold">Placeholder, US</span>
+        <div class="horizontal">
+            <span id="lat">0.00° N</span>
+            <span id="lon">0.00° W</span>
+        </div><br>
+
+        <span id="weatherDesc" style="font-size:20px;font-weight:bold">Clear</span><br>
+        <span id="windSpeed">Wind Speed: 0 mph</span>
+    </div><br>
+
+    <!-- Puzzle Display --><br><br><br><br>
+    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Puzzle</h2>
+    <div class="horizontal">
+        <div class="centered"><br>
+            <div class="puzzle-grid"></div>
+            <h2 id="timer">0:00</h2>
+            <button id="reset">Reset</button><br>
+            <label id="message">Finish the Puzzle!</label>
+        </div>
+            <div class="puzzle-storage"></div>
+    </div>
+
+    <script src="pageLoader.js"></script>
+    <script>fadePreviousNavButton()</script>
+
+    <script src="proj5.js"></script>
+
+    <script src="objects.js"></script>
+    <script src="proj8.js"></script>
+    <script src="proj10.js"></script>
+    <script src="proj11.js"></script>
+</body>
+</html>

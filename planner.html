@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav>
-        <div id="index.html" class="ribbon"  type="button" onclick="loadPage(id)">
+        <div id="index.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>HOME</span></div>
         <div class="ribbon selected">
             <span>PLANNER</span></div>
@@ -18,34 +18,24 @@
             <span>CREDITS</span></div>
         <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>SETTINGS</span></div>
+        <div id="projects.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>PROJECTS</span></div>
     </nav>
 
     <h1>PLANNER</h1>
     <p>
-        The Planner page will feature a drag-and-drop interface to plan your degree completion plan as well as view prerequisites.
-    </p>
-
-    <br><br><br>
-    <h2 style="background-color:var(--dark-color); padding: 12px; border-radius: 16px; text-align: center">Photo Gallery</h2>
-    <div class="horizontal-container">
-        <button class="gallery-button left" onclick="moveGallery(-1)"><</button>
-        <div class="gallery"></div>
-        <button class="gallery-button right" onclick="moveGallery(1)">></button>
-    </div>
-    <h3 id="image-caption" style="text-align:center"></h3>
+        Make your college degree completion plan with the Planner. Fill in your courses for each semester to ensure you are on track to graduate.
+    </p><br><br>
     
-    <!--Task List-->
-    <h3>Task Manager</h3>
-    <button class="course-add" onclick="addTask()">+</button>
+    <div id="root"></div>
 
-    <div id="taskList"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel" src="final.js"></script>
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
-
-    <script src="proj5.js"></script>
-
-    <script src="objects.js"></script>
-    <script src="proj8.js"></script>
 </body>
 </html>

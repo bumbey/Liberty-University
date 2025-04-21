@@ -19,46 +19,26 @@
             <span>CREDITS</span></div>
         <div id="settings.html" class="ribbon" type="button" onclick="loadPage(id)">
             <span>SETTINGS</span></div>
+        <div id="projects.html" class="ribbon" type="button" onclick="loadPage(id)">
+            <span>PROJECTS</span></div>
     </nav>
 
-    <h1>HOME</h1><br><br><br><br>
+    <h1>HOME</h1><br><br><br><br><br>
 
-    <!-- Weather Display -->
-    <div class="weather-display">
-        <h2>Weather</h2>
-        <span id="weatherError" style="color:red;font-weight:bold"></span>
-        <span id="temp" style="font-size:48px;font-weight:bold;">0°F</span>
-        <span id="feelsLike">Feels like: <b>0°F</b></span>
-        <div class="horizontal">
-            <span id="minTemp">Min: 0°F</span>
-            <span id="maxTemp">Max: 0°F</span>
-        </div><br>
-
-        <span id="location" style="font-size:24px;font-weight:bold">Placeholder, US</span>
-        <div class="horizontal">
-            <span id="lat">0.00° N</span>
-            <span id="lon">0.00° W</span>
-        </div><br>
-
-        <span id="weatherDesc" style="font-size:20px;font-weight:bold">Clear</span>
-        <span id="windSpeed">Wind Speed: 0 mph</span>
-    </div><br>
-
-    <!-- Puzzle Display -->
-    <div class="horizontal">
-        <div class="centered"><br>
-            <div class="puzzle-grid"></div>
-            <h2 id="timer">0:00</h2>
-            <button id="reset">Reset</button><br>
-            <label id="message">Finish the Puzzle!</label>
-        </div>
-            <div class="puzzle-storage"></div>
+    <div class="horizontal-container">
+        <span id="introTitle" style="font-size:48px;font-weight:bold;display:none">
+            Welcome to
+            <span style="color:var(--primary-color)">Prereq</span>
+        </span><br><br>
+        <span id="introSubtitle" style="font-size:24px;color:var(--primary-color);display:none">Get ahead on your degree plan!</span><br><br>
+        <input id="purposeInput" type="text" style="width:512px;display:none" placeholder="What do you hope to do?">
     </div>
 
     <script src="pageLoader.js"></script>
     <script>fadePreviousNavButton()</script>
 
-    <script src="proj10.js"></script>
-    <script src="proj11.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="jquery.js"></script>
 </body>
 </html>

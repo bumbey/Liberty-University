@@ -10,7 +10,7 @@ Displays information on homepage, or error message if data cannot be fetched.
 
 The Fetch API has a more simplified promise approach to retrieving data, using .then
 and .catch to evaluate requests and errors. XMLHttpRequest is more involved, using
-analysis of request state and status to determine whether a request was succesful.
+analysis of request state and status to determine whether a request was successful.
 Utilizing the data, however, is very similar.
 */
 
